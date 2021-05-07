@@ -1,0 +1,23 @@
+doctype html
+html(lang="fa")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate")
+        meta(http-equiv="Pragma" content="no-cache")
+        meta(http-equiv="Expires" content="0")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color" content="#A62626")
+        title= title
+        link(rel="icon" href="/media/favicon.png")
+        link(rel="stylesheet" href="./tools/bootstrap.min.css")
+        link(rel="stylesheet" href="./tools/index.css")
+        script(src="./tools/jquery.js")
+        script(src="./tools/bootstrap.min.js")
+    body
+        header(class="py-4 text-center")
+            h2="تحلیل شغل های دیوار"
+        div(class="list-group")
+            each job, i in list
+                a(class="list-group-item list-group-item-action py-3" href=job["link"] target="_blank")
+                    p(class="m-0")=(i + 1) + ". " + job["title"]
+                    p(class="m-0")=anal[job["token"]]
